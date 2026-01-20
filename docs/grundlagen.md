@@ -1,16 +1,45 @@
-# Klang & Ton
+# Rhythmus – Puls und Wiederholung
 
-## Ein erster Klang
+## Der musikalische Puls
 
-Ein einzelner Ton kann mit Strudel sehr einfach erzeugt werden:
+In der Musik ist der **Puls** das regelmäßige Zeitraster, auf dem Klänge erscheinen.
+Im folgenden Beispiel hören wir einen gleichmäßigen Puls mit zwei verschiedenen
+Schlägen.
+
+👉 Achte nur auf **Reihenfolge** und **Wiederholung**, nicht auf Technik.
+
+---
 
 <iframe
-  src="https://strudel.cc/#bm90ZSgiPDM2IDQ4IDYwIDcyPiIpLnMoInNpbmUiKS5fc2NvcGUoe3NjYWxlOjEuNSxoZWlnaHQ6MjAwfSk%3D"
+  src="https://strudel.cc/?code=
+  // --- technische Vorbereitung (ausgeblendet) ---
+  setcpm(100)
+  samples('github:tidalcycles/dirt-samples')
+
+  // --- musikalischer Wrapper ---
+  let groove = p => sound(p)
+
+  // --- sichtbarer musikalischer Code ---
+  groove(%22bd%20sd%22)
+  "
   width="100%"
-  height="260"
+  height="360"
   style="border:1px solid #ccc; border-radius:12px;">
 </iframe>
 
-### Beobachtung
-- Der Klang wiederholt sich periodisch
-- Tempo und Klangfarbe lassen sich verändern
+---
+
+## Was hörst du?
+
+- Welche Klänge wiederholen sich?
+- Entsteht ein Gefühl von „vorwärts gehen“?
+- Kannst du mitzählen?
+
+---
+
+## Aufgabe
+
+Verändere **nur** die Zeichenfolge im Klammerausdruck:
+
+```text
+bd sd
