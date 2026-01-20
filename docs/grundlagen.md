@@ -7,7 +7,7 @@ Ein einzelner Ton kann mit Strudel sehr einfach erzeugt werden:
 <iframe
   src="https://strudel.cc/?code=sound(%22bd%22)"
   width="100%"
-  height="360"
+  height="260"
   style="border:1px solid #ccc; border-radius:12px;">
 </iframe>
 
