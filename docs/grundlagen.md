@@ -10,18 +10,9 @@ Schlägen.
 
 ---
 
+
 <iframe
-  src="https://strudel.cc/?code=
-  // --- technische Vorbereitung (ausgeblendet) ---
-  setcpm(100)
-  samples('github:tidalcycles/dirt-samples')
-
-  // --- musikalischer Wrapper ---
-  let groove = p => sound(p)
-
-  // --- sichtbarer musikalischer Code ---
-  groove(%22bd%20sd%22)
-  "
+  src="https://strudel.cc/?code=sound(%22bd%20sd%22).fast(2)"
   width="100%"
   height="360"
   style="border:1px solid #ccc; border-radius:12px;">
