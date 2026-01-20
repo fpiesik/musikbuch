@@ -12,7 +12,7 @@ Schlägen.
 
 
 <iframe
-  src="https://strudel.cc/?code=sound(%22bd%20sd%22).fast(2)"
+  src="https://strudel.cc/#bGV0IGdyb292ZSA9IHAgPT4gc291bmQocCkuZmFzdCgyKQpncm9vdmUoImJkIHNkIikK"
   width="100%"
   height="360"
   style="border:1px solid #ccc; border-radius:12px;">
