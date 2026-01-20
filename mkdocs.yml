@@ -1,0 +1,22 @@
+site_name: Interaktive Musiktheorie mit Strudel
+site_description: Ein Online-Buch mit interaktiven Musikbeispielen
+site_author: Herr Piesik
+
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - content.code.copy
+
+nav:
+  - Start: index.md
+  - Grundlagen:
+      - Klang & Ton: grundlagen.md
+      - Rhythmus: rhythmus.md
+
+markdown_extensions:
+  - admonition
+  - footnotes
+  - attr_list
+  - md_in_html
