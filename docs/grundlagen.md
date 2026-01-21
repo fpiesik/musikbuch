@@ -15,15 +15,11 @@ Schlägen.
 </div>
 
 <strudel-editor class="strudel" id="ex1">
-<!--
-setcpm(90/5)
-let groove = p => sound(p).fast(2)
-
-// ---
-groove("bd sd")
--->
+  <!--
+setcpm(90/4)
+sound("bd sd").fast(2)
+  -->
 </strudel-editor>
-
 
 <script>
   (function () {
