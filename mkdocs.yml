@@ -15,9 +15,12 @@ theme:
 
 nav:
   - Start: index.md
-  - Kapite 1:
+  - Musik ist Schwingung:
       - Klang & Ton: grundlagen.md
       - Rhythmus: rhythmus.md
+  - Rhythmen:
+  - Instrumente:
+  - Die Gitarre:
 
 markdown_extensions:
   - admonition
