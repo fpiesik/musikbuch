@@ -14,3 +14,6 @@ strudel-editor.strudel canvas {
 strudel-editor.strudel .cm-editor {
   max-height: 6em;
 }
+strudel-editor.hide-until-marker .cm-gutters {
+  display: none !important;
+}
