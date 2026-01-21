@@ -1,6 +1,7 @@
 strudel-editor.strudel {
   display: block;
   width: 100%;
+  height: auto;
   border: 1px solid #ccc;
   border-radius: 6px;
   overflow: hidden;
