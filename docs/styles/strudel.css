@@ -1,7 +1,8 @@
 .strudel {
+  display: block;      /* wichtig: Custom Elements sind sonst inline */
   width: 100%;
-  height: 280px;               /* dein „kleineres Fenster“ */
+  height: 450px;       /* testweise groß */
   border: 1px solid #ccc;
   border-radius: 12px;
-  overflow: hidden;
+  overflow: auto;      /* statt hidden */
 }
