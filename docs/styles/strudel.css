@@ -4,6 +4,6 @@ strudel-editor.strudel {
   width: 100%;
   height: 18px;          /* <- hier einstellen (z.B. 140–260px) */
   border: 1px solid #ccc;
-  border-radius: 12px;
+  border-radius: 1px;
   overflow: hidden;       /* schneidet ggf. interne Ränder sauber ab */
 }
