@@ -17,8 +17,8 @@ Schlägen.
 <strudel-editor class="strudel hide-until-marker" id="ex1">
   <!--
 setcpm(90/5)
-// ---
 sound("bd sd").fast(2)._scope()
+// ---
   -->
 </strudel-editor>
 
