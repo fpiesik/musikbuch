@@ -1,7 +1,7 @@
 (() => {
   const MARKER = "// ---";
 
-  console.log("✅ Strudel marker hider runn");
+  console.log("✅ Strudel marker hider running");
 
   function isMarkerLine(lineEl) {
     const t = (lineEl.textContent || "").replace(/\s+/g, " ").trim();
