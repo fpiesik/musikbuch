@@ -14,9 +14,10 @@ Schlägen.
   <button type="button" onclick="window.__strudelEval?.()">Update</button>
 </div>
 
-<strudel-editor class="strudel" id="ex1">
+<strudel-editor class="strudel hide-until-marker" id="ex1">
   <!--
 setcpm(90/4)
+// ---
 sound("bd sd").fast(2)
   -->
 </strudel-editor>
