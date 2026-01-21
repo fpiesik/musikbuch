@@ -21,26 +21,23 @@ sound("bd sd").fast(2)
 </strudel-editor>
 
 <script>
-(function () {
-  const el = document.getElementById("ex1");
-  const wait = setInterval(() => {
-    const ed = el?.editor;
-    if (!ed) return;
+  (function () {
+    const el = document.getElementById("ex1");
+    // warte kurz, bis das Web Component initialisiert ist
+    const tryBind = () => {
+      if (!el || !el.editor) return false;
 
-    clearInterval(wait);
+      // diese Namen sind Beispiele – bitte per DevTools prüfen und anpassen:
+      window.__strudelToggle = () => el.editor.toggle?.();
+      window.__strudelEval   = () => el.editor.evaluate?.() || el.editor.eval?.();
 
-    // Wenn dein Editor-Objekt Zugriff auf den Code bietet:
-    const code = ed.getCode?.() || el.textContent || "";
-    const lines = code.split("\n").filter(l => l.trim().length).length;
+      return true;
+    };
 
-    if (lines > 8) {
-      // hier müsstest du je nach API "scroll to bottom" aufrufen
-      ed.scrollToBottom?.();
-    }
-  }, 100);
-})();
+    if (tryBind()) return;
+    const t = setInterval(() => { if (tryBind()) clearInterval(t); }, 100);
+  })();
 </script>
-
 
 
 ---
