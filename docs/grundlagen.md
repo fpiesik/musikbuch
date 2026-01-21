@@ -18,7 +18,7 @@ Schlägen.
   <!--
 setcpm(90/5)
 // ---
-sound("bd sd").fast(2)
+sound("bd sd").fast(2)._scope()
   -->
 </strudel-editor>
 
