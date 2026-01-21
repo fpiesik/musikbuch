@@ -1,41 +1,36 @@
-<div class="strudel-window" id="ex-groove">
-  <iframe
-    src="https://strudel.cc/#bGV0IGdyb292ZSA9IHAgPT4gc291bmQocCkuZmFzdCgyKQpncm9vdmUoImJkIHNkIikK"
-    class="strudel-iframe"
-    loading="lazy"
-  ></iframe>
-</div>
+# Rhythmus – Puls und Wiederholung
 
-<script>
-  // Scrollt den *Container* nach unten, nicht den Inhalt im iframe.
-  // Das ist cross-origin-sicher.
-  (function () {
-    const box = document.getElementById("ex-groove");
-    if (!box) return;
+## Der musikalische Puls
 
-    // nach dem Rendern einmal nach unten springen
-    requestAnimationFrame(() => {
-      box.scrollTop = box.scrollHeight;
-    });
+In der Musik ist der **Puls** das regelmäßige Zeitraster, auf dem Klänge erscheinen.
+Im folgenden Beispiel hören wir einen gleichmäßigen Puls mit zwei verschiedenen
+Schlägen.
 
-    // optional nochmal, falls Layout nachlädt
-    setTimeout(() => { box.scrollTop = box.scrollHeight; }, 400);
-  })();
-</script>
+👉 Achte nur auf **Reihenfolge** und **Wiederholung**, nicht auf Technik.
 
-<style>
-  .strudel-window {
-    width: 100%;
-    height: 220px;            /* <- dein "kleines Fenster" */
-    overflow: auto;           /* <- scrollbar hier */
-    border: 1px solid #ccc;
-    border-radius: 12px;
-  }
+---
 
-  .strudel-iframe {
-    width: 100%;
-    height: 900px;            /* <- bewusst groß, damit es was zu scrollen gibt */
-    border: 0;
-    display: block;
-  }
-</style>
+
+<iframe
+  src="https://strudel.cc/#bGV0IGdyb292ZSA9IHAgPT4gc291bmQocCkuZmFzdCgyKQpncm9vdmUoImJkIHNkIikK"
+  width="100%"
+  height="100"
+  style="border:1px solid #ccc; border-radius:12px;">
+</iframe>
+
+---
+
+## Was hörst du?
+
+- Welche Klänge wiederholen sich?
+- Entsteht ein Gefühl von „vorwärts gehen“?
+- Kannst du mitzählen?
+
+---
+
+## Aufgabe
+
+Verändere **nur** die Zeichenfolge im Klammerausdruck:
+
+```text
+bd sd
