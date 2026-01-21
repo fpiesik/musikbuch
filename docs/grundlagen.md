@@ -10,13 +10,11 @@ Schlägen.
 
 ---
 
-
-<iframe
-  src="https://strudel.cc/#bGV0IGdyb292ZSA9IHAgPT4gc291bmQocCkuZmFzdCgyKQpncm9vdmUoImJkIHNkIikK"
-  width="100%"
-  height="50"
-  style="border:1px solid #ccc; border-radius:12px;">
-</iframe>
+<strudel-editor class="strudel">
+  <!--
+sound("bd sd").fast(2)
+  -->
+</strudel-editor>
 
 ---
 

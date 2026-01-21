@@ -60,3 +60,11 @@ markdown_extensions:
   - footnotes
   - attr_list
   - md_in_html
+
+extra_javascript:
+  - https://unpkg.com/@strudel/repl@latest
+
+extra_css:
+  - styles/strudel.css
+
+
