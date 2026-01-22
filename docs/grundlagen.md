@@ -14,15 +14,15 @@ Schlägen.
   <button type="button" onclick="window.__strudelEval?.()">Update</button>
 </div>
 
-
-
-<strudel-editor class="strudel hide-until-marker" id="ex1">
-  <!--
+<div class="strudel-wrap">
+  <strudel-editor class="strudel hide-until-marker" id="ex1">
+    <!--
 setcpm(120/2)
 sound("bd sd, - - - hh - hh - -, - perc - perc:1*2")
 .bank("RolandCompurhythm1000")  // -!-
-  -->
-</strudel-editor>
+    -->
+  </strudel-editor>
+</div>
 
 <script>
   (function () {
