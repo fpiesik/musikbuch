@@ -10,7 +10,7 @@ Schlägen.
 
 ---
 <div class="strudel-wrap">
-  <strudel-editor class="strudel hide-until-marker no-viz">
+  <strudel-editor class="strudel hide-until-marker">
     <!--
   setcpm(60) //-!-
   n("0 2 3 4 1 3 <[6,8] [7,9]>")
