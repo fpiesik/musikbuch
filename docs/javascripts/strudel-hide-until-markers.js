@@ -1,24 +1,16 @@
 (() => {
   const CLASS_BASE = "hide-until-marker";
 
-  // Marker (ohne Leerzeichen)
   const RE_BLOCK_MARKER = /\/\/---\s*$/;  // //--- am Zeilenende
   const RE_HIDE_LINE    = /\/\/-!-\s*$/;  // //-!- am Zeilenende
 
   function text(lineEl) {
     return (lineEl.textContent || "").trim();
   }
-
-  function isBlockMarker(lineEl) {
-    return RE_BLOCK_MARKER.test(text(lineEl));
-  }
-
-  function isHideLine(lineEl) {
-    return RE_HIDE_LINE.test(text(lineEl));
-  }
+  function isBlockMarker(lineEl) { return RE_BLOCK_MARKER.test(text(lineEl)); }
+  function isHideLine(lineEl)    { return RE_HIDE_LINE.test(text(lineEl)); }
 
   function findRenderedCmRoot(customEl) {
-    // Bei dir wird der gerenderte Bereich nach <strudel-editor> als Geschwister angehängt
     let n = customEl.nextElementSibling;
     for (let i = 0; i < 12 && n; i++) {
       const cm = n.querySelector?.(".cm-editor");
@@ -39,9 +31,7 @@
   }
 
   function buildNthList(indices1Based) {
-    return indices1Based
-      .map(n => `.cm-content .cm-line:nth-of-type(${n})`)
-      .join(", ");
+    return indices1Based.map(n => `.cm-content .cm-line:nth-of-type(${n})`).join(", ");
   }
 
   function applyOne(customEl, idx) {
@@ -61,7 +51,7 @@
     lines.forEach((line, i) => {
       if (isBlockMarker(line)) {
         blockMarkerIndex0 = i;
-        hideMarkerNums1.push(i + 1); // Markerzeile selbst
+        hideMarkerNums1.push(i + 1);
       }
       if (isHideLine(line)) hideLineNums1.push(i + 1);
     });
@@ -73,41 +63,32 @@
     if (hideFirstCount > 0) {
       css += `
 /* ${uniq}: hide first ${hideFirstCount} lines (until //---) */
-.cm-editor.${uniq} .cm-content .cm-line:nth-of-type(-n+${hideFirstCount}) {
-  display: none !important;
-}
+.cm-editor.${uniq} .cm-content .cm-line:nth-of-type(-n+${hideFirstCount}) { display:none !important; }
 `;
     }
 
     if (hideLineNums1.length > 0) {
       css += `
 /* ${uniq}: hide lines marked with //-!- */
-.cm-editor.${uniq} ${buildNthList(hideLineNums1)} {
-  display: none !important;
-}
+.cm-editor.${uniq} ${buildNthList(hideLineNums1)} { display:none !important; }
 `;
     }
 
     if (hideMarkerNums1.length > 0) {
       css += `
 /* ${uniq}: always hide //--- marker line itself */
-.cm-editor.${uniq} ${buildNthList(hideMarkerNums1)} {
-  display: none !important;
-}
+.cm-editor.${uniq} ${buildNthList(hideMarkerNums1)} { display:none !important; }
 `;
     }
 
     if (hideFirstCount > 0 || hideLineNums1.length > 0 || hideMarkerNums1.length > 0) {
       css += `
-.cm-editor.${uniq} .cm-gutters {
-  display: none !important;
-}
+.cm-editor.${uniq} .cm-gutters { display:none !important; }
 `;
     }
 
-    if (!css) return false;
+    if (!css) return true; // nichts zu tun ist ok
 
-    // ✅ Optimierung/Stabilität: CSS-Block pro Editor ersetzen/aktualisieren
     const tag = ensureStyleTag();
     const start = `/*BEGIN:${uniq}*/`;
     const end   = `/*END:${uniq}*/`;
@@ -122,34 +103,66 @@
     return true;
   }
 
-  function process() {
+  // --- Debounce helper ---
+  function debounce(fn, ms) {
+    let t = null;
+    return () => {
+      clearTimeout(t);
+      t = setTimeout(fn, ms);
+    };
+  }
+
+  // --- Setup observers for each editor ---
+  const observed = new WeakSet();
+
+  function attachObserver(customEl, idx) {
+    const cmRoot = findRenderedCmRoot(customEl);
+    if (!cmRoot) return false;
+
+    if (observed.has(cmRoot)) return true;
+    observed.add(cmRoot);
+
+    const reapply = debounce(() => applyOne(customEl, idx), 50);
+
+    // Beobachte Änderungen im Editor (CodeMirror baut DOM gerne um)
+    const obs = new MutationObserver(reapply);
+    obs.observe(cmRoot, { childList: true, subtree: true, characterData: true });
+
+    // Erstmalig anwenden
+    applyOne(customEl, idx);
+
+    return true;
+  }
+
+  function processAll() {
     document.querySelectorAll(`strudel-editor.${CLASS_BASE}`).forEach((el, i) => {
-      applyOne(el, i);
+      // Versuch: Wenn cmRoot noch nicht da ist, später nochmal probieren
+      attachObserver(el, i);
     });
   }
 
   function start() {
-    process();
+    processAll();
 
-    // ✅ Performance: kürzeres Polling-Fenster, weniger häufig
+    // Kurzes Bootstrapping-Polling nur um den Moment zu erwischen, wenn cmRoot auftaucht
     let tries = 0;
-    const maxTries = 18;   // 18 * 200ms = 3.6s
+    const maxTries = 30;    // 30 * 200ms = 6s (nur initial)
     const timer = setInterval(() => {
-      process();
+      processAll();
       if (++tries >= maxTries) clearInterval(timer);
     }, 200);
 
     window.addEventListener("load", () => {
-      process();
-      setTimeout(process, 250);
-      setTimeout(process, 1000);
+      processAll();
+      setTimeout(processAll, 250);
+      setTimeout(processAll, 1000);
     });
 
+    // Nach Klick auf "Update" nochmal (zur Sicherheit)
     document.addEventListener("click", (e) => {
       if ((e.target?.textContent || "").trim() === "Update") {
-        // nach Update neu anwenden, weil CM gern neu rendert
-        setTimeout(process, 50);
-        setTimeout(process, 250);
+        setTimeout(processAll, 50);
+        setTimeout(processAll, 250);
       }
     });
   }
