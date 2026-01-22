@@ -11,11 +11,19 @@
   }
 
   function isBlockMarker(lineEl) {
-    return RE_BLOCK_MARKER.test(text(lineEl));
-  }
+  const t = (lineEl.textContent || "");
+  const idx = t.indexOf("//");
+  if (idx === -1) return false;
+  const comment = t.slice(idx);
+  return comment.includes("//---");
+}
 
   function isHideLine(lineEl) {
-    return RE_HIDE_LINE.test(text(lineEl));
+    const t = (lineEl.textContent || "");
+    const idx = t.indexOf("//");
+    if (idx === -1) return false;
+    const comment = t.slice(idx);
+    return comment.includes("//-!-");
   }
 
   function findRenderedCmRoot(customEl) {
