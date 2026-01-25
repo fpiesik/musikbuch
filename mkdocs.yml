@@ -15,47 +15,16 @@ theme:
 
 nav:
   - Start: index.md
-  - 01 Schwingungen:
-      - Was ist Schwingung?: 01_schwingung.md
-      - Aufträge: 01_aufträge.md
+  - 01 Schwingung:
+      - 'Schwingung: Bausteine der Musik': 01_schwingung.md
+      - Aufgaben: 01_aufträge.md
       - Experimente: 01_experimente.md
       - Merkkarten: 01_merkkarten.md
-  - 01:
-      - Klang & Ton: grundlagen.md
-      - Rhythmus: rhythmus.md
-  - 02:
-      - Klang & Ton: grundlagen.md
-      - Rhythmus: rhythmus.md
-  - 03:
-      - Klang & Ton: grundlagen.md
-      - Rhythmus: rhythmus.md
-  - 04:
-      - Klang & Ton: grundlagen.md
-      - Rhythmus: rhythmus.md
-  - 05:
-      - Klang & Ton: grundlagen.md
-      - Rhythmus: rhythmus.md
-  - 06:
-      - Klang & Ton: grundlagen.md
-      - Rhythmus: rhythmus.md
-  - 07:
-      - Klang & Ton: grundlagen.md
-      - Rhythmus: rhythmus.md
-  - 08:
-      - Klang & Ton: grundlagen.md
-      - Rhythmus: rhythmus.md
-  - 09:
-      - Klang & Ton: grundlagen.md
-      - Rhythmus: rhythmus.md
-  - 10:
-      - Klang & Ton: grundlagen.md
-      - Rhythmus: rhythmus.md
-  - 11:
-      - Klang & Ton: grundlagen.md
-      - Rhythmus: rhythmus.md
-  - 12:
-      - Klang & Ton: grundlagen.md
-      - Rhythmus: rhythmus.md
+  - 02 Obertöne:
+      - Eine Schwingung kommt selten allein: 02_obertöne.md
+      - Aufgaben: 02_aufgaben.md
+      - Experimente: 02_experimente.md
+      - Merkkarten: 02_merkkarten.md
 
 markdown_extensions:
   - admonition
