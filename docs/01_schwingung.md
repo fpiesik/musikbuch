@@ -31,14 +31,14 @@ Stell dir eine Feder vor, an der ein Gewicht hängt. Ziehst du das Gewicht nach 
     
 - **Frequenz** – wie schnell schwingt etwas?
     
-- **Dämpfung** – wie lange klingt die Schwingung?
+- **Dämpfung** – wie lange klingt die Schwingung?
     
 - **Auslenkung** - wie ist der schwingende Körper gerade von seiner Ruhelage entfernt?
     
 
 Diese drei Eigenschaften begegnen uns im ganzen Musikunterricht immer wieder. Lerne sie mit Hilfe der [Federmaschine](https://fpiesik.github.io/musikbuch/animationen/federmaschine/) besser kennen!
 
-<img src="./resources/federmaschine.gif" alt="federmaschine.gif" width="206" height="116" class="jop-noMdConv">
+<img src="../resources/federmaschine.gif" alt="federmaschine.gif" width="206" height="116" class="jop-noMdConv">
 
 Wie du siehst, kann man Schwingungen auch aufzeichnen. Zum Beispiel, indem man einen Stift an einem schwingenden Körper befestigt, ein Papier darunter legt und langsam daran zieht. Die Federmaschine macht im Grunde genau das. So entsteht ein so genannter Graph, der den zeitlichen Verlauf der Schwingung zeigt. Geräte, die Schwingungen aufzeichnen und anzeigen können, nennt man **Oszilloskop**.
 
