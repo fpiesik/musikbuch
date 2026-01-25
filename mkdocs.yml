@@ -17,7 +17,9 @@ nav:
   - Start: index.md
   - 01 Schwingungen, Die Bausteine der Musik:
       - Was ist Schwingung?: 01_schwingung.md
-      - Rhythmus: rhythmus.md
+      - Aufträge: 01_aufträge.md
+      - Experimente: 01_experiemnte.md
+      - Merkkarten: 01_merkkarten.md
   - 01:
       - Klang & Ton: grundlagen.md
       - Rhythmus: rhythmus.md
