@@ -1,28 +1,18 @@
 ## 1\. Alles beginnt mit Bewegung
-
 Musik kann man nicht sehen, sie entsteht aber nicht aus dem Nichts. Bevor wir einen Ton hören können, muss sich etwas **bewegen**. Diese besondere Art der Bewegung nennt man **Schwingung**.
 
 Eine **Schwingung** ist eine regelmäßige Hin-und-her-Bewegung um eine **Ruhelage**.
 
 Viele Dinge in unserer Welt schwingen – nicht nur Musikinstrumente:
 
-- eine Schaukel auf dem Spielplatz
-    
-- Bäume im Wind
-    
-- die Luft beim Sprechen
-    
-- unser Herz beim Schlagen
-    
-- elektrische Signale im Handy
-    
-
+Eine Schaukel auf dem Spielplatz, Bäume im Wind, die Luft beim Sprechen, unser Herz beim Schlagen, elektrische Signale im Handy, Wellen auf dem Wasser, Erdbeben, Licht (auch Licht ist eine Art Schwingung!)
+        
 👉 Musik ist also Teil eines viel größeren Naturphänomens.
+👉 Wir Menschen sind selbst schwingende Wesen – deshalb wirkt Musik so stark auf uns.
 
 * * *
 
 ## 2\. Was genau ist eine Schwingung?
-
 Stell dir eine Feder vor, an der ein Gewicht hängt. Ziehst du das Gewicht nach unten und lässt los, bewegt es sich immer wieder nach oben und unten.
 
 **Für die Musik sind vor allem drei Eigenschaften einer Schwingung wichtig:**
@@ -31,43 +21,13 @@ Stell dir eine Feder vor, an der ein Gewicht hängt. Ziehst du das Gewicht nach 
     
 - **Frequenz** – wie schnell schwingt etwas?
     
-- **Dämpfung** – wie lange klingt die Schwingung?
-    
-    
+- **Dauer** – wie lange dauert die Schwingung?
 
 Diese drei Eigenschaften begegnen uns im ganzen Musikunterricht immer wieder. Lerne sie mit Hilfe der <ins>[Federmaschine](https://fpiesik.github.io/musikbuch/animationen/federmaschine/)</ins> besser kennen!
 
 <img src="../resources/federmaschine.gif" alt="federmaschine.gif" width="480" height="270" class="jop-noMdConv">
 
 Wie du siehst, kann man Schwingungen auch aufzeichnen. Zum Beispiel, indem man einen Stift an einem schwingenden Körper befestigt, ein Papier darunter legt und langsam daran zieht. Die Federmaschine macht im Grunde genau das. So entsteht ein so genannter Graph, der den zeitlichen Verlauf der Schwingung zeigt. Geräte, die Schwingungen aufzeichnen und anzeigen können, nennt man **Oszilloskop**.
-
-* * *
-
-## 3\. Schwingungen überall
-
-### Schwingungen in der Natur
-
-- Wellen auf dem Wasser
-    
-- Erdbeben
-    
-- Wind
-    
-- Licht (auch Licht ist eine Art Schwingung!)
-    
-
-### Schwingungen im Körper
-
-- Herzschlag
-    
-- Atmung
-    
-- Stimme
-    
-- Zittern bei Kälte oder Aufregung
-    
-
-👉 Wir Menschen sind selbst schwingende Wesen – deshalb wirkt Musik so stark auf uns.
 
 * * *
 
