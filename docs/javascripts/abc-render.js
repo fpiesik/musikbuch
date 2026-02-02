@@ -48,10 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
     async function initSynthIfNeeded() {
       if (synthReady) return;
 
-      // SynthController erzeugt die UI (wir verwenden aber unseren Button)
       synthCtrl = new ABCJS.synth.SynthController();
-
-      // Wir "laden" ihn in unseren Wrapper, ohne abcjs-eigene Buttons zu zeigen
       synthCtrl.load(wrapper, null, {
         displayPlay: false,
         displayProgress: true,
@@ -59,24 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
         displayRestart: false
       });
 
-      // AudioEngine vorbereiten
-      const synth = new ABCJS.synth.CreateSynth();
-      await synth.init({
-        visualObj,
-        options: {
-          // Du kannst hier später Tempo/Instrument etc. anpassen
-        }
-      });
-
-      // Audio-Kontext initialisieren (muss durch User-Geste passieren)
-      await synthCtrl.setTune(visualObj, false, {
-        chordsOff: true
-      });
-
-      // Der Controller nutzt intern den Synth; "prime" ist wichtig in manchen Browsern
-      if (ABCJS.synth.supportsAudio()) {
-        await synthCtrl.prime();
-      }
+      await synthCtrl.setTune(visualObj, false, { chordsOff: true });
 
       synthReady = true;
     }
