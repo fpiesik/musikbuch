@@ -40,11 +40,13 @@
     const notationDiv = document.createElement("div");
     notationDiv.className = "abc-notation";
 
-    wrap.appendChild(audioDiv);
+    // Noten oben, Wiedergabe unten
     wrap.appendChild(notationDiv);
+    wrap.appendChild(audioDiv);
 
     return { wrap, audioDiv, notationDiv };
   }
+
 
   // --- Main rendering -------------------------------------------------------
 
