@@ -59,8 +59,7 @@ Eine Schaukel auf dem Spielplatz, Bäume im Wind, die Luft beim Sprechen, unser 
       width:70%;
       height:70%;
       border:none;
-      transform: translateX(-12px);
-    "
+      transform: translateX(-12px);"
     allowfullscreen
   ></iframe>
 </div>
