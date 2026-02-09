@@ -33,7 +33,7 @@
 <ins>[Link](../games/wh_lvl3/)</ins>
 
 ## Welche Zählzeit?
-### Lelel1
+### Level 1
 <iframe src="../games/battlesound_lvl1/" allowfullscreen style="border:none; overflow:hidden; width:620px; height:310px; margin:auto"></iframe>
 <ins>[Link](../games/battlesound_lvl1/)</ins>
 
