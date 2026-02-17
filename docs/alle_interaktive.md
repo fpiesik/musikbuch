@@ -30,7 +30,7 @@
 
 ## Notenkoffer (ich packe meinen Koffer mit Noten)
 <iframe src="../games/notenkoffer/" allowfullscreen style="border:none; overflow:hidden; width:620px; height:310px; margin:auto"></iframe>
-<ins>[Link](../games/wh_lvl3/)</ins>
+<ins>[Link](../games/notenkoffer/)</ins>
 
 ## Welche Zählzeit?
 ### Level 1
